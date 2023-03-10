@@ -5,9 +5,9 @@ if __name__ == "__main__":
     argv_number = len(argv)
     index = 1
 
-    if argv_number is 0:
+    if argv_number == 0:
         print("{:d} arguments.".format(argv_number))
-    elif argv_number is 1:
+    elif argv_number == 1:
         print("{:d} argument:".format(argv_number))
         print("{:d}: {:s}".format(index, sys.argv[1]))
     else:
