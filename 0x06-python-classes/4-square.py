@@ -8,7 +8,7 @@ class Square:
     '''getter for retrieving and presenting the data with more user appeal'''
     @property
     def size(self):
-        self.__size = size
+        return self.__size = size
 
     '''set setter in order to clean out the output'''
     @size.setter
