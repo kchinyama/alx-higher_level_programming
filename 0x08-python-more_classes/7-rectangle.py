@@ -95,7 +95,7 @@ class Rectangle:
         return string
 
     def __repr__(self):
-        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
+        return ("{:s} ({:d}, {:d})".format(type(self).__name__, self.__width, self.__height))
 
     def __del__(self):
         """Removes/deletes an instance
