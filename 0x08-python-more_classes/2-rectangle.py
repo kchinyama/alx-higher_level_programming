@@ -54,13 +54,13 @@ class Rectangle:
     def area(self):
         """ area is height x width. Returns computed number
         """
-        return width * height
+        return self.__width * self.__height
 
     def perimeter(self):
         """ perimeter is the distance around the circumfrance of the shape
         """
-        if width == 0 or height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         """ computed perimeter when width and length values are not zero
         """
-        return (width * 2) + (height * 2)
+        return (self.__width * 2) + (self.__height * 2)
