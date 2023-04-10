@@ -1,0 +1,31 @@
+====================================
+ How to Use 3-say_my_name.py
+====================================
+
+This library is contains the use of the function ``say_my_name()``.
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> from say_my_name import say_my_name
+    >>> print(say_my_name('kaumba' 'chinyama'))
+    My name is kaumbachinyama 
+
+
+    >>> print(say_my_name('kaumba chinyama'))
+    My name is kaumba chinyama
+
+    >>> print(say_my_name('chinyama'))
+    My name is chinyama 
+
+Error inputs for edge case testing
+
+::
+    >>> print(say_my_name(5, 'kaumba'))
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> print(say_my_name('kaumba', 5))
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+::
