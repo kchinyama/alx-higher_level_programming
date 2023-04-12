@@ -8,4 +8,4 @@ def write_file(filename="", text=""):
     previous contents if file already exists
     '''
     with open("filename", mode='w', encoding="utf-8") as my_file:
-        return my_file.write(text)
+        my_file.write(text)
