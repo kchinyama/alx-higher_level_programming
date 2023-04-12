@@ -9,5 +9,5 @@ def save_to_json_file(my_obj, filename):
     using a JSON representation. The use of with statement
     mandatory
     '''
-    with open("filename", mode='w') as my_file:
+    with open(filename, mode="w") as my_file:
         my_file.write(json.dumps(my_obj))
