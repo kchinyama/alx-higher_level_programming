@@ -9,4 +9,4 @@ import json
 def from_json_string(my_str):
     '''python data structure represnted in JSON
     '''
-    return json.loads(my_obj)
+    return json.loads(my_str)
