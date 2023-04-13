@@ -1,0 +1,39 @@
+====================================
+ How to Use 7-base_geometry.py
+====================================
+
+This library is very simple, since it only has one function called
+``BaseGeometry()``.
+
+::
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> k = BaseGeometry()
+
+good Tests
+>>> k.integer_validator('my_int', 24)
+>>> k.integer_validator('width', 18)
+>>> k.integer_validator('name', 'kaumba')
+
+bad Tests
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+>>> k.integer_validator('name', '12.8')
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+>>> k.integer_validator('name', [])
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+>>> k.integer_validator('name', ())
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+>>> k.integer_validator('name', True)
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+>>> print(len(__import__('7-base_geometry').BaseGeometry.__doc__) > 0)
+True
