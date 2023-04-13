@@ -1,0 +1,39 @@
+====================================
+ How to Use 1-my_list.py
+====================================
+
+This library is very simple, since it only has one function called
+``print_sorted()``.
+
+::
+
+    >>> MyList = __import__("1-my_list").MyList
+    >>> Module = __import__("1-my_list").__doc__
+    >>> Class = __import__("1-my_list').MyClass.__doc__
+    >>> Function = __import__("1-my_list").my_function.__doc__
+
+    >>> from 1-my_list import MyList
+    >>> my_list = MyList()
+
+::
+
+Adding and removing items(various data types) from the list
+    >>> my_list.append(23)
+    >>> my_list.append(24)
+    >>> print(my_list)
+    [23 ,24]
+    >>> my_list.pop()
+    [24]
+    >>> print(my_list)
+    [23]
+    >>> my_list.append('kaumba')
+    >>> my_list.append(24.4)
+    >>> my_list.append('k')
+    >>> my_list.append(24)
+
+    >>> print(my_list)
+    [23, 'kaumba', 24.4, 'k', 24]
+
+
+    >>> print(len(my_list))
+    5
