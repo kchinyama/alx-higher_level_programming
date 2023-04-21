@@ -7,12 +7,11 @@ from base import Base
 class Rectangle(Base):
     """rectangle class which inherits from base"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id=None)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-
-        super().__init__(id=None)
 
         @property
         def width(self):
