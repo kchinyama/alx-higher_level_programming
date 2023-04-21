@@ -1,0 +1,22 @@
+====================================
+ How to Use 4-print_square.txt.py
+====================================
+
+This library is contains the use of the function ``print_square()``.
+
+::
+
+    >>> print_square = __import__('4-print_square').print_square
+    >>> from prints_square import print_square
+    
+Error inputs for edge case testing
+
+::
+    >>> print(say_my_name(5, 'kaumba'))
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+    >>> print(say_my_name('kaumba', 5))
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+::

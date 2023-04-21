@@ -2,7 +2,7 @@
 """simple rectangle class
 """
 
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """rectangle class which inherits from base"""
