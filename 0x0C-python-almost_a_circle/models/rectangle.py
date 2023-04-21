@@ -41,7 +41,7 @@ class Rectangle(Base):
         def x(self):
             return self.__x
         
-        @width.setter
+        @x.setter
         def x(self, value):
             if value .isdigit():
                 self.__x = value
@@ -52,7 +52,7 @@ class Rectangle(Base):
         def width(self):
             return self.__width
         
-        @width.setter
+        @y.setter
         def y(self, value):
             if value .isdigit():
                 self.__y = value
