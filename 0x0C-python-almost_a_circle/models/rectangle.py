@@ -11,50 +11,46 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        self.id = id
 
         super().__init__(id=None)
 
         @property
         def width(self):
+            """width getter"""
             return self.__width
 
         @width.setter
         def width(self, value):
-            if value .isdigit():
-                self.__width = value
-            else:
-                raise TypeError("width must be a positive number")
+            """width setter"""
+            self.__width = value
+
 
         @property
         def height(self):
+            """height getter"""
             return self.__height
 
         @height.setter
         def height(self, value):
-            if value .isdigit():
-                self.__height = value
-            else:
-                raise TypeError("height must be a positive number")
+            """height setter"""
+            self.__height = value
 
         @property
         def x(self):
+            """x getter"""
             return self.__x
         
         @x.setter
         def x(self, value):
-            if value .isdigit():
-                self.__x = value
-            else:
-                raise TypeError("x must be a positive number")
+            """x setter"""
+            self.__x = value
 
         @property
-        def width(self):
+        def y(self):
+            """y getter"""
             return self.__width
         
         @y.setter
         def y(self, value):
-            if value .isdigit():
-                self.__y = value
-            else:
-                raise TypeError("y must be a positive number")
+            """y setter"""
+            self.__y = value
