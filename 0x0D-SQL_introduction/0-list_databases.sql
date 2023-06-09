@@ -1,2 +1,2 @@
 --this script demonstrates how to list databases
-SHOW DATATBASES;
+SHOW DATABASES;
