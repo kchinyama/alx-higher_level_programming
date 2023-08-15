@@ -1,3 +1,6 @@
 #!/usr/bin/python3
 def print_last_digit(number):
-    print(int(chr(number)[-1]))
+    for k in number:
+        if k == int(chr(number)[-1]):
+            print(k)
+    #print(int(chr(number)[-1]))
