@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    k = my_list.index(idx)
-
-    if k < 0:
-        return None
-    elif k > range(len(my_list[idx])):
-        return None
-    else:
-        return k
-
-
+    for k in my_list:
+        if idx < 0:
+            return None
+        elif idx > len(my_list):
+            return None
+        else:
+            return my_list[idx]
