@@ -8,4 +8,4 @@ def fizzbuzz():
         elif k % 3 == 0 and k % 5 == 0:
             print("Fizz Buzz ", end="")
         else:
-            print("{} ".format(k), end="")
+            print("{:d} ".format(k), end="")
