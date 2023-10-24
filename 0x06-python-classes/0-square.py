@@ -3,6 +3,6 @@
 
 class Square:
     """
-    creation of a square class-all instances will be of this class
+    empty class for Square
     """
     pass
