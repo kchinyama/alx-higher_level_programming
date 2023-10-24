@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
-
+"""this is an empty class"""
 class Square:
-    
-    'print(__import__("my_module").MyClass.__doc__)'
-    
+    """
+    body of class to follow
+    """
     pass
