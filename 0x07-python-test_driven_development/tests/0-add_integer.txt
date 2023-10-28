@@ -1,0 +1,33 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(24, 18)
+42
+
+>>> add_integer(0, -10)
+-10
+
+>>> add_integer(98, -10)
+88
+
+>>> add_integer(81)
+179
+
+>>> add_integer('vumba', 87)
+Traceback (most recent call last):
+    	...
+TypeError: a must be an integer
+
+>>> add_integer(24, 'c')
+Traceback (most recent call last):
+	    ...
+TypeError: b must be an integer
+
+>>> add_integer(False, 18)
+Traceback (most recent call last):
+	    ...
+TypeError: a must be an integer
+
+>>> add_integer(7+5k, 6)
+Traceback (most recent call last):
+	    ...
+SyntaxError: invalid syntax
