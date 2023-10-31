@@ -1,0 +1,30 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("i believe that Jesus Christ is God, the creator.")
+i believe that Jesus Christ is God, the creator.
+<BLANKLINE>
+>>> text_indentation("Do you believe that Jesus Christ died on the cross for your sin?")
+Do you believe that Jesus Christ died on the cross for your sin?
+<BLANKLINE>
+>>> text_indentation("What would be your answer to that awesome truth:")
+What would be your answer to that awesome truth:
+<BLANKLINE>
+>>> text_indentation(10+10)
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+
+>>> text_indentation(-1)
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+
+>>> text_indentation(True)
+Traceback (most recent call last):
+        ...
+TypeError: text must be a string
+
+>>> text_indentation(hello there)
+Traceback (most recent call last):
+            ...
+SyntaxError: invalid syntax
