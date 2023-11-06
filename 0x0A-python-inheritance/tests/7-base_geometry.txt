@@ -1,0 +1,38 @@
+Testing the ``7-base_geometry`` module
+
+Import first then use accordingly
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bg = BaseGeometry()
+
+
+Use case when properly applied
+>>> bg.integer_validator("my_int", 12)
+12
+
+Expected output achieved
+>>> bg.integer_validator("width", 20)
+20
+
+Value error thrown when negative used(expected)
+>>> bg.integer_validator("my_int", -1)
+Traceback (most recent call last):
+        ...
+ValueError: my_int must be greater than 0
+
+Error thrown when 0 is used(expected)
+>>> bg.integer_validator("my_int", 0)
+Traceback (most recent call last):
+        ...
+ValueError: my_int must be greater than 0
+
+Error thrown for boolean
+>>> bg.integer_validator("my_int", True)
+Traceback (most recent call last):
+        ...
+TypeError: my_int must be an integer
+
+and error thrown for string
+>>> bg.integer_validator("width", 'ten')
+Traceback (most recent call last):
+        ...
+TypeError: width must be an integer
