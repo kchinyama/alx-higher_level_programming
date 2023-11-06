@@ -2,6 +2,7 @@
 """the lookup module
 """
 
+
 def lookup(obj):
     """returns a list object"""
 
