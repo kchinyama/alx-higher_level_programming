@@ -4,5 +4,8 @@
 
 
 def inherits_from(obj, a_class):
-    """functin that uses subclass built it"""
-    return issubclass(a_class, int)
+    """function that uses built it is instance to check oject
+    is has inherited from other class"""
+    if type(obj) == a_class:
+        return False
+    return isinstance(obj, a_class)
