@@ -34,6 +34,17 @@ class Rectangle(Base):
         """str method overide to print custom message"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
 
+    def update(self, *args, **kwargs):
+        """update method that assigns arguments to each attribute"""
+        attris = ["id", "width", "height", "x", "y"]
+
+        if args:
+            for arg, attri in zip(args, attris):
+                setattr(self, attri, arg)
+
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     @property
     def width(self):
