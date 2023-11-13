@@ -26,6 +26,10 @@ class Rectangle(Base):
         for k in range(self.height):
             print("#" * self.width)
 
+    def __str__(self):
+        """str method overide to print custom message"""
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+
 
     @property
     def width(self):
