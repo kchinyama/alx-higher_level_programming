@@ -18,3 +18,19 @@ class Square(Rectangle):
     def __str__(self):
         """overided str method for square class"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
+
+    @property
+    def size(self):
+        """getter for size attribute"""
+        return self.__size
+
+    @size.setter
+    def size(self, size):
+        """setter for size"""
+        if type(size) is not int:
+            raise TypeError("width must be an integer")
+        if size < 0:
+            raise ValueError("width must be > 0")
+        self.__width = size
+        self.__height = size
+
