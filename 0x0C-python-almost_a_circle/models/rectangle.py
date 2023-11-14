@@ -46,6 +46,11 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+
+    def to_dictionary(self):
+        """method that returns dict version of object"""
+        return {'id': self.id, 'width': self.width, 'height': self.height, 'x': self.x, 'y': self.y}
+
     @property
     def width(self):
         """getter for width"""

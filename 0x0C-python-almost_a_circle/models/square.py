@@ -18,7 +18,21 @@ class Square(Rectangle):
     def __str__(self):
         """overided str method for square class"""
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.height}"
+    
+    def update(self, *args, **kwargs):
+        """args and kwargs method"""
+        attris = ["id", "size", "x", "y"]
 
+        if args:
+            for arg, attri in zip(args, attris):
+                setattr(self, attri, arg)
+
+        if kwargs:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y}
     @property
     def size(self):
         """getter for size attribute"""
