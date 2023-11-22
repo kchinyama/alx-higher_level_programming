@@ -14,7 +14,8 @@ class Square(Rectangle):
         self.__x = x
         self.__y = y
 
-        super().__init__(id=id, x=x, y=y, width=size, height=size)
+        super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """overided str method for square class"""
