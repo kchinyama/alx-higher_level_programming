@@ -1,1 +1,1 @@
-This is the directory containing completed Tasks in 0x0D. SQL - Introduction Project
+This directory contains my completed Tasks inside the alx 0x0D. SQL - Introduction project
