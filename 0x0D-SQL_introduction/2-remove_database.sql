@@ -1,2 +1,2 @@
 -- demo of deleting database if it doesnt exits, no error
-DELETE DATABASE hbtn_0c_0;
+DROP DATABASE IF EXISTS hbtn_0c_0;
