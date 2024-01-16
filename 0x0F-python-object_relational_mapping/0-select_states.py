@@ -1,3 +1,8 @@
+#!/usr/bin/python3
+"""
+demo script that displays all cities in database
+"""
+
 if __name__ == "__main__":
     """the arguments needed for the query"""
     import MySQLdb
