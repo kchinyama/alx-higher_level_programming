@@ -6,7 +6,7 @@ demo script that displays all cities in database
 
 
 
-import MYSQLdb
+import MySQLdb
 import sys
 
 
