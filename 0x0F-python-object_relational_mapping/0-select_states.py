@@ -5,14 +5,14 @@ demo script that displays all cities in database
 
 if __name__ == "__main__":
     import MySQLdb
-    import sys
+    from sys import argv
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db_name=sys.argv[3])
+        user=argv[1],
+        passwd=argv[2],
+        db_name=argv[3])
 
     mycur = db.cursor()
 
