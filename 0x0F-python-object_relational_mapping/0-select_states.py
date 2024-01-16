@@ -31,7 +31,7 @@ if __name__ == "__main__":
     mycur = db.cursor()
 
     """use cursor object to execute command to list all states in database"""
-    mycur.execute("SELECT * FROM states ORDER BY states.id ASC")
+    mycur.execute("SELECT * FROM states ORDER BY id ASC")
 
     """use loop to display results"""
     queried_items = mycur.fetchall()
