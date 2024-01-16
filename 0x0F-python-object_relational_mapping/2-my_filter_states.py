@@ -8,11 +8,12 @@ if __name__ == "__main__":
     import MySQLdb
     from sys import argv
     """the arguments needed for the query"""
+    state_name = argv[4]
+
     db = MySQLdb.connect(
         user=argv[1],
         passwd=argv[2],
-        db=argv[3]
-        state_name = argv[4])
+        db=argv[3])
 
     """create cursor object to navigate the database and tables"""
     mycur = db.cursor()
