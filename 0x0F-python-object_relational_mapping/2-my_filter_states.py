@@ -18,7 +18,7 @@ if __name__ == "__main__":
     mycur = db.cursor()
 
     """use cursor object to execute command to list all states in database"""
-    mycur.execute("SELECT * FROM states WHERE name LIKE BINARY {} ORDER BY states.id",format(state_name))
+    mycur.execute("SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY states.id"(state_name))
 
     """use loop to display results"""
     queried_items = mycur.fetchall()
