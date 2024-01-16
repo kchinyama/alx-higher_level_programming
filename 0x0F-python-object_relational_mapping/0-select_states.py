@@ -3,29 +3,22 @@
 """
 demo script that displays all cities in database
 """
-
-
-
 import MySQLdb
 import sys
 
 
 if __name__ == '__main__':
-
-
     """the arguments needed for the query"""
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-
 
     db = MYSQLdb.connect(
         host="localhost",
         port=3306,
         user=username,
         passwd=password,
-        db_name=database
-    )
+        db_name=database)
 
     """create cursor object to navigate the database and tables"""
     mycur = db.cursor()
