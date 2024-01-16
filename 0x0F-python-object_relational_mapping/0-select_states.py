@@ -9,8 +9,6 @@ if __name__ == "__main__":
     from sys import argv
     """the arguments needed for the query"""
     db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
         user=argv[1],
         passwd=argv[2],
         db=argv[3])
