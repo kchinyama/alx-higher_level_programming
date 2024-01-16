@@ -9,12 +9,16 @@ import sys
 
 if __name__ == '__main__':
     """the arguments needed for the query"""
-    db = MYSQLdb.connect(
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+
+    db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db_name=sys.argv[3])
+        user=username,
+        passwd=password,
+        db_name=database)
 
     """create cursor object to navigate the database and tables"""
     mycur = db.cursor()
