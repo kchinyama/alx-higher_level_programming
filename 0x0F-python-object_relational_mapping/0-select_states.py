@@ -1,32 +1,20 @@
 #!/usr/bin/python3
-
+"""Script lists all states from database hbtn_0e_0_usa
+Takes three arguments:
+    mysql username
+    mysql password
+    database name
+Connects to default host (localhost) and port (3306)
 """
-demo script that displays all cities in database
-"""
-import MySQLdb
-import sys
 
-
-if __name__ == '__main__':
-    """the arguments needed for the query"""
-    db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user=sys.argv[1],
-        passwd=sys.argv[2],
-        db_name=sys.argv[3])
-
-    """create cursor object to navigate the database and tables"""
-    mycur = db.cursor()
-
-    """use cursor object to execute command to list all states in database"""
-    mycur.execute("SELECT * FROM states ORDER BY states.id ASC")
-
-    """use loop to display results"""
-    queried_items = mycur.fetchall()
-
-    for state in queried_items:
-        print(state)
-
-    mycur.close()
+if __name__ == "__main__":
+    from sys import argv
+    import MySQLdb
+    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+    c = db.cursor()
+    c.execute("""SELECT * FROM states ORDER BY states.id ASC""")
+    rows = c.fetchall()
+    for row in rows:
+        print(row)
+    c.close()
     db.close()
