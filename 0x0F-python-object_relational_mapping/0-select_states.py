@@ -4,10 +4,9 @@
 demo script that displays all cities in database
 """
 
-import MySQLdb
-import sys
-
 if __name__ == "__main__":
+    import MySQLdb
+    import sys
     """the arguments needed for the query"""
     username = sys.argv[1]
     password = sys.argv[2]
