@@ -10,7 +10,7 @@ if __name__ == "__main__":
     db = MySQLdb.connect(
         user=argv[1],
         passwd=argv[2],
-        db_name=argv[3])
+        db=argv[3])
 
     mycur = db.cursor()
 
