@@ -1,2 +1,2 @@
 -- lists all tables in database in mysql
-SELECT * FROM Database;
+SELECT * FROM hbtn_0c_0;
