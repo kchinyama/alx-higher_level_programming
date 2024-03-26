@@ -1,2 +1,2 @@
--- lists all databases in mysql
-SELECT * FROM mysql;
+-- lists all tables in database in mysql
+SELECT * FROM Database;
