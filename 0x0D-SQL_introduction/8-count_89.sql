@@ -1,3 +1,3 @@
 -- counts common values of a table of database in MYSQL server 
-SELECT COUNT(id = 89)
+SELECT COUNT(id)
 FROM first_table;
