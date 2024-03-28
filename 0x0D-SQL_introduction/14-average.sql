@@ -1,6 +1,3 @@
--- alter the table, add an average column then compute average score
-ALTER TABLE second_table
-ADD (average FLOAT);
-
-SELECT AVG(average)
+-- compute average score and set out put to alias avearge
+SELECT AVG(score) as average
 FROM second_table;
