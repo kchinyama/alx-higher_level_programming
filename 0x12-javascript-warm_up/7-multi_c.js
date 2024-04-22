@@ -1,7 +1,17 @@
 #!/usr/bin/node
 
-myStr = ['C is fun'];
-mine = true;
+function printCIsFun(k) {
+  const numOccurrences = parseInt(k);
 
-while mine {
-	console.log(myStr * process.argv[2]);
+  if (isNaN(numOccurrences)) {
+    console.log('Missing number of occurrences');
+  }
+
+  for (let i = 0; i < numOccurrences; i++) {
+    console.log("C is fun");
+  }
+}
+
+const arg = process.argv[2];
+printCIsFun(arg);
+
