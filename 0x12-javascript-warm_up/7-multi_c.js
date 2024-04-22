@@ -8,7 +8,7 @@ function printCIsFun(k) {
   }
 
   for (let i = 0; i < numOccurrences; i++) {
-    console.log("C is fun");
+    console.log('C is fun');
   }
 }
 
