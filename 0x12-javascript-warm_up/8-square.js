@@ -8,10 +8,7 @@ function printSquare(k) {
   }
 
   for (let i = 0; i < numX; i++) {
-    console.log('X');
-	  for (let k = 0; k < numX; k++)
-		  console.log('X');
-  }
+	  console.log('X'.repeat(numX));
 }
 
 const arg = process.argv[2];
