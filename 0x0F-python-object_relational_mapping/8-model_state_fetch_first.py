@@ -17,7 +17,8 @@ dbConnect = f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
 engine = create_engine(dbConnect)
 
 
-with Session(engine) as outcome:
+with Session(bind=engine) as outcome:
+    Base.metadata.create_all(engine)
     result = outcome.query(State).first()
 
 if result:
