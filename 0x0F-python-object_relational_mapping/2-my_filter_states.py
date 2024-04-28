@@ -31,7 +31,7 @@ if __name__ == "__main__":
         myCursor = connector.cursor()
 
         # execute the commands required
-        myCursor.execute("SELECT * FROM states WHERE name=%s ORDER BY states.id", (argv[4],))
+        myCursor.execute("SELECT * FROM states WHERE name='{}' ORDER BY states.id".format(argv[4],))
 
         # fetch all the results of the query
         records = myCursor.fetchall()
