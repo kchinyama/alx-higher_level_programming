@@ -22,7 +22,7 @@ if __name__ == "__main__":
     myCursor = connector.cursor()
 
     # execute the commands required
-    myCursor.execute("SELECT states.name, cities.name FROM states INNER JOIN cities")# ORDER BY states.id")
+    myCursor.execute("SELECT cities.id, cities.name, states.name FROM cities JOIN states ON cities.state_id = states.id ORDER BY cities.id")
 
     # fetch all the results of the query
     records = myCursor.fetchall()
