@@ -27,9 +27,14 @@ if __name__ == "__main__":
     # fetch all the results of the query
     records = myCursor.fetchall()
 
+    listRecords = []
+
     # iterate through the results in order to print each item
     for record in records:
-        print(f"{record[0]}")
+        listRecords.append(", ".join(record))
     
+    print(", ".join(listRecords))
+
+
     # best practuce to close conncetio once done
     connector.close()
