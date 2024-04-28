@@ -38,7 +38,7 @@ if __name__ == "__main__":
 
         # iterate through the results in order to print each item
         for record in records:
-            print(record)
+            print(f"{record}")
     
     
         connector.close()
