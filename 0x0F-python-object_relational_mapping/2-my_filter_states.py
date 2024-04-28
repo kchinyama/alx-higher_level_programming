@@ -9,6 +9,13 @@ from sys import argv
 
 if __name__ == "__main__":
 
+    # ensure correct number of arguments
+    if len(argv) != 5:
+        exit(1)
+
+    # extract arguments
+    username, password, database, state_name = argv[1], argv[2], argv[3], argv[4]
+
     try:
 
         # create connector object that will connect to database
@@ -33,6 +40,8 @@ if __name__ == "__main__":
         for record in records:
             print(record)
     
-    finally:
-        # best practuce to close conncetio once done
+    
         connector.close()
+
+    except MySQLdb.Error as e:
+        exit(1)
