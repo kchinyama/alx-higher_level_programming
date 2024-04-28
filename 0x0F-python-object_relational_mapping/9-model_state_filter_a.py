@@ -23,6 +23,6 @@ if __name__ == '__main__':
     session = Session()
 
     # query the database for the data
-
-    for state in session.query(State).where(State.name.like('%a').order_by(State.id):
+    request = session.query(State).where(State.name.like('%a')).order_by(State.id)
+    for state in request:
         print(f"{state.id}: {state.name}")
