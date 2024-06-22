@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     myState = argv[4]
 
-    myCur.execute("SELECT * FROM states WHERE name=%s ORDER BY states.id", (myState,))
+    myCur.execute("SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY states.id;".format(myState))
 
     result = myCur.fetchall()
     
