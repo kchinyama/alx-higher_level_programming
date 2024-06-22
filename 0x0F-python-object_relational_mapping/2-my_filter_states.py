@@ -19,7 +19,7 @@ if __name__ == '__main__':
 
     myState = argv[4]
 
-    myCur.execute("SELECT * FROM states WHERE name='{myState}' ORDER BY states.id")
+    myCur.execute("SELECT * FROM states WHERE name=%s ORDER BY states.id", (myState,))
 
     result = myCur.fetchall()
     
