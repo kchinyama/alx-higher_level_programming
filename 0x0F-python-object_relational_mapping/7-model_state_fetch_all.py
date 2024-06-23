@@ -26,6 +26,6 @@ if __name__ == '__main__':
     allStates = mySession.query(State).order_by(State.id).all()
 
     for state in allStates:
-        print(f"{state.id}. {state.name}")
+        print(f"{state.id}: {state.name}")
 
     mySession.close()
